@@ -37,6 +37,8 @@ func api(req typhon.Request) typhon.Response {
 		log.Fatalln(err)
 	}
 
+	fmt.Printf(resp)
+
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)

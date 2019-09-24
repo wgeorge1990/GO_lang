@@ -9,9 +9,10 @@ func main() {
 	results := make(chan int, 100)
 
 	go worker(jobs, results)
-	//now we can just add more workers
+	//Now we can just add more workers and run program
+	//We are now solving this three time concurrently.
 	go worker(jobs, results)
-	go worker(jobs, results)
+	 go worker(jobs, results)
 	
 	
 
